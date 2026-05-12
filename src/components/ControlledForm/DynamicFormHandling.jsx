@@ -7,17 +7,22 @@ const DynamicFormHandling = () => {
         password: ''
     })
 
+    const handleSubmit = e => {
+        e.preventDefault()
+        const {email, password} = formData
+        console.log(email, password)
+    }
+
     const handleOnChange = e => {
         const { name, value } = e.target
         setFormData({ ...formData, [name]: value })
-
     }
 
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100">
 
             <form
-                onSubmit=""
+                onSubmit={handleSubmit}
                 className="w-full max-w-md bg-white p-8 rounded-2xl shadow-lg space-y-5"
             >
 
@@ -53,7 +58,7 @@ const DynamicFormHandling = () => {
                 </button>
 
             </form>
-
+            <h1>{`Email: ${formData.email}, Password: ${formData.password}`}</h1>
         </div>
     )
 
