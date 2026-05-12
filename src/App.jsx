@@ -7,9 +7,9 @@ function App() {
   return (
     <>
       <div className="max-w-[1000px] mx-auto">
-        {/* <ControlledForm></ControlledForm> */}
+        <ControlledForm></ControlledForm>
         {/* <ControlledForm2></ControlledForm2> */}
-        <DynamicFormHandling></DynamicFormHandling>
+        {/* <DynamicFormHandling></DynamicFormHandling> */}
       </div>
     </>
   )
