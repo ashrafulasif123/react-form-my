@@ -8,7 +8,9 @@ const DynamicFormHandling = () => {
     })
 
     const handleOnChange = e => {
-        console.log(e)
+        const { name, value } = e.target
+        const v = { [name]: value }
+        console.log(v)
     }
 
 
